@@ -1,0 +1,15 @@
+{
+    "protoc": {
+        "path": "/usr/local/bin/protoc",
+        "compile_on_save": false,
+        "options": [
+            // "--plugin=protoc-gen-go=[absolute_path_to]/protoc-gen-go",
+            // "--plugin=protoc-gen-go-grpc=[absolute_path_to]/protoc-gen-go-grpc",
+            // "--plugin=protoc-gen-dart=[absolute_path_to]/protoc-gen-dart",
+            "--proto_path=${workspaceRoot}",
+            "--dart_out=grpc:./client/lib/src",
+            "--go_out=./server",
+            "--go-grpc_out=./server"
+        ]
+    }
+}
