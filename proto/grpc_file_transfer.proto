@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.hikers.oohtv.grpcfiletransfer";
+option go_package = "proto;proto";
+option java_outer_classname = "GrpcFileTransfer";
+option objc_class_prefix = "GFT";
+
+package grpcfiletransfer;
+
+message Response {
+    bytes fileChunk = 1;
+}
+message Request {
+    string fileName = 1;
+}
+
+service GrpcFileTransferService {
+    rpc Download(Request) returns (stream Response);
+}
