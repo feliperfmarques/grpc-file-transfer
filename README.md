@@ -1,6 +1,6 @@
-# gRPC File Transfer Example
+# gRPC Stream File Transfer Example
 
-Simple example for transfer file(.mp4) using gRPC Stream.
+Simple example for file transfer using gRPC Stream.
 
 * Server: Go
 * Client: Dart
@@ -20,7 +20,7 @@ export GO111MODULE=on
 go get github.com/golang/protobuf/protoc-gen-go
 ```
 
-5. protoc-gen-go plugin
+5. protoc-gen-go-grpc plugin
 ```
 export GO111MODULE=on
 go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
